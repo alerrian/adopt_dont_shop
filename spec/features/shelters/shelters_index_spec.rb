@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'shelters index page' do
+RSpec.describe 'shelters index page', type: :feature do
   context 'as a user' do
     it 'can see names of shelters' do
       shelter1 = Shelter.create(name: 'Limitless Reef')
