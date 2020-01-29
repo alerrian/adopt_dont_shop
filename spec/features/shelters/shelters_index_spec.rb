@@ -15,7 +15,7 @@ RSpec.describe 'shelters index page', type: :feature do
     it 'has a link to create a new shelter' do
       visit '/shelters'
 
-      expect(page).to have_link('Create a new Shelter', href: '/shelters/create')
+      expect(page).to have_link('Create a new Shelter', href: '/shelters/new')
     end
   end
 end
