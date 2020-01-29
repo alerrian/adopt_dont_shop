@@ -20,6 +20,7 @@ RSpec.describe 'editing a shelter' do
       expect(current_path).to eq("/shelters/#{shelter1.id}/edit")
 
       click_button('shelter_submit')
+      
       expect(page).to have_content('New Pet Shop Name')
     end
   end
