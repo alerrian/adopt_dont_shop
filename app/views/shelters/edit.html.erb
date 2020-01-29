@@ -1,0 +1,15 @@
+<p>Edit Shelter Information</p>
+
+<%= form_tag("/shelters/#{@shelter.id}/edit", method: :patch) do %>
+  <h4>Shelter Name: </h4>
+  <input type='text' name='shelter[name]'/><br/>
+  <h4>Shelter Address: </h4>
+  <input type='text' name='shelter[address]'/><br/>
+  <h4>Shelter City: </h4>
+  <input type='text' name='shelter[city]'/><br/>
+  <h4>Shelter State: </h4>
+  <input type='text' name='shelter[state]'/><br/>
+  <h4>Shelter Zip:</h4>
+  <input type='text' name='shelter[zip]'/><br/>
+  <input type='submit' id='shelter_submit'>
+<% end %>
