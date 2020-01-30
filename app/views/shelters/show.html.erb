@@ -8,8 +8,14 @@
   <%= @shelter.zip %>
 </p>
 
-<a href="/shelters/<%= @shelter.id %>/edit">Edit</a><br>
-<a href="/shelters">Back to Shelter List</a><br>
+<%= form_tag("/shelters/#{@shelter.id}/edit", method: :get) do %>
+  <%= submit_tag 'Edit' %>
+<% end %>
+
+<%= form_tag( '/shelters', method: :get) do%>
+  <%= submit_tag 'Back to Shelter List' %>
+<% end %>
+
 <%= form_tag("/shelters/#{@shelter.id}", method: :delete) do %>
   <%= submit_tag 'Delete Shelter' %>
 <% end %>
