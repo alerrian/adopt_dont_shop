@@ -1,10 +1,12 @@
 <h1>Shelter Index</h1>
 
 <h1><%= @shelter.name %></h1>
-<p><%= @shelter.address %></p>
-<p><%= @shelter.city %></p>
-<p><%= @shelter.state %></p>
-<p><%= @shelter.zip %></p>
+<p>
+  <%= @shelter.address %><br>
+  <%= @shelter.city %>
+  <%= @shelter.state %>
+  <%= @shelter.zip %>
+</p>
 
 <a href="/shelters/<%= @shelter.id %>/edit">Edit</a><br>
 <a href="/shelters">Back to Shelter List</a><br>
