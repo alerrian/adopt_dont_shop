@@ -13,7 +13,7 @@ RSpec.describe 'editing a shelter' do
 
       expect(page).to have_content("Mike's Shelter")
 
-      click_link('Edit')
+      click_on('Edit')
 
       expect(current_path).to eq("/shelters/#{shelter1.id}/edit")
 

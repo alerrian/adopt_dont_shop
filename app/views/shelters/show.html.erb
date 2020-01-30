@@ -6,14 +6,6 @@
   <%= @shelter.zip %>
 </p>
 
-<%= form_tag("/shelters/#{@shelter.id}/edit", method: :get) do %>
-  <%= submit_tag 'Edit' %>
-<% end %>
-
-<%= form_tag( '/shelters', method: :get) do%>
-  <%= submit_tag 'Back to Shelter List' %>
-<% end %>
-
-<%= form_tag("/shelters/#{@shelter.id}", method: :delete) do %>
-  <%= submit_tag 'Delete Shelter' %>
-<% end %>
+<%= button_to 'Edit', "/shelters/#{@shelter.id}/edit", method: :get %>
+<%= button_to 'Delete Shelter', "/shelters/#{@shelter.id}", method: :delete %>
+<%= button_to 'Back to Shelter List', '/shelters', method: :get %>

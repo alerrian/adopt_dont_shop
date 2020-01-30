@@ -45,7 +45,9 @@ RSpec.describe 'shelter show page links' do
 
       visit "/shelters/#{shelter1.id}"
 
-      expect(page).to have_link('Edit', href: "/shelters/#{shelter1.id}/edit")
+      click_button 'Edit'
+
+      expect(current_path).to eq("/shelters/#{shelter1.id}/edit")
     end
   end
 end
