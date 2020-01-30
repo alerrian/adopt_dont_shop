@@ -15,12 +15,12 @@ RSpec.describe 'editing a shelter' do
 
       click_link('Edit')
 
-      fill_in 'shelter[name]', with: 'New Pet Shop Name'
-
       expect(current_path).to eq("/shelters/#{shelter1.id}/edit")
 
+      fill_in 'shelter[name]', with: 'New Pet Shop Name'
+
       click_button('shelter_submit')
-      
+
       expect(page).to have_content('New Pet Shop Name')
     end
   end

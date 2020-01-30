@@ -6,5 +6,8 @@
 <p><%= @shelter.state %></p>
 <p><%= @shelter.zip %></p>
 
-<a href="/shelters/<%= @shelter.id %>/edit">Edit</a>
-<a href="/shelters">Back to Shelter List</a>
+<a href="/shelters/<%= @shelter.id %>/edit">Edit</a><br>
+<a href="/shelters">Back to Shelter List</a><br>
+<%= form_tag("/shelters/#{@shelter.id}", method: :delete) do %>
+  <%= submit_tag 'Delete Shelter' %>
+<% end %>
