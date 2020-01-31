@@ -13,15 +13,21 @@ RSpec.describe 'editing a shelter' do
 
       expect(page).to have_content("Mike's Shelter")
 
-      click_on('Edit')
+      click_on 'Edit'
 
       expect(current_path).to eq("/shelters/#{shelter1.id}/edit")
 
-      fill_in 'name', with: 'New Pet Shop Name'
+      fill_in 'Name', with: 'New Pet Shop Name'
+      fill_in 'Address', with: '1234 Address Road'
+      fill_in 'City', with: 'Denver'
+      fill_in 'State', with: 'CO'
+      fill_in 'Zip', with: 12345
 
-      click_button('Submit Changes')
+      click_on 'Submit Changes'
 
+      expect(current_path).to eq("/shelters/#{shelter1.id}")
       expect(page).to have_content('New Pet Shop Name')
+      expect(page).to_not have_content("Mike's Shelter")
     end
   end
 end
