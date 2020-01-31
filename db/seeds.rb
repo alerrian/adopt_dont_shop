@@ -2,16 +2,16 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 
 mike = Shelter.create(name: "Mike's Shelter",
-               address: '1331 17th Street',
-               city: 'Denver',
-               state: 'CO',
-               zip: '80202')
+                      address: '1331 17th Street',
+                      city: 'Denver',
+                      state: 'CO',
+                      zip: '80202')
 
 meg = Shelter.create(name: "Meg's Shelter",
-               address: '150 Main Street',
-               city: 'Hershey',
-               state: 'PA',
-               zip: '17033')
+                     address: '150 Main Street',
+                     city: 'Hershey',
+                     state: 'PA',
+                     zip: '17033')
 
 # Mike's Shelter has one pet, Athena, 1 year old, female, description: butthead
 Pet.create(image: 'https://www.talenthounds.ca/wp-content/uploads/2014/02/1010297_10151682411488254_1369748570_n.jpg',
