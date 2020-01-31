@@ -6,7 +6,7 @@ class CreatePets < ActiveRecord::Migration[5.1]
       t.text :description
       t.string :age
       t.string :sex
-      t.boolean :status
+      t.string :status
 
       t.timestamps
     end
