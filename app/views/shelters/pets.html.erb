@@ -1,6 +1,6 @@
 <% @shelter_pets.pets.each do |pet| %>
   <%= image_tag pet.image %>
-  <%= pet.name %>
+  <p><%= pet.name %>
   <%= pet.age %>
-  <%= pet.sex %>
+  <%= pet.sex %></p>
 <% end %>
