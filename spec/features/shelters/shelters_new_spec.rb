@@ -11,7 +11,7 @@ RSpec.describe 'new shelter creation', type: :feature do
       fill_in 'state', with: 'State Abbrev'
       fill_in 'zip', with: 'Zip Code'
 
-      click_button('Submit')
+      click_button('Create Shelter')
 
       expect(current_path).to eq('/shelters')
       expect(page).to have_content('New Shelter Name')

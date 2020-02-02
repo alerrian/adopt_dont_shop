@@ -24,7 +24,7 @@ RSpec.describe 'as a visitor', type: :feature do
     fill_in 'age', with: '1'
     fill_in 'sex', with: 'male'
 
-    click_button 'Submit'
+    click_button 'Create Pet'
 
     expect(current_path).to eq("/shelters/#{@shelter1.id}/pets")
     expect(page).to have_content('Octavius')

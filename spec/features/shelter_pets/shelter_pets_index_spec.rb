@@ -45,7 +45,7 @@ RSpec.describe 'as a visitor', type: :feature do
     expect(page).to have_css("img[src*='#{@pet1.image}']")
     expect(page).to have_content(@pet1.name)
     expect(page).to have_content(@pet1.age)
-    expect(page).to have_content(@pet1.sex)
+    expect(page).to have_content('F')
   end
 
   it 'visits shelter2 pet index' do
@@ -54,6 +54,6 @@ RSpec.describe 'as a visitor', type: :feature do
     expect(page).to have_css("img[src*='#{@pet2.image}']")
     expect(page).to have_content(@pet2.name)
     expect(page).to have_content(@pet2.age)
-    expect(page).to have_content(@pet2.sex)
+    expect(page).to have_content('M')
   end
 end

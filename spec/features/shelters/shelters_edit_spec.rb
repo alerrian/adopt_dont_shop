@@ -23,7 +23,7 @@ RSpec.describe 'editing a shelter' do
       fill_in 'State', with: 'CO'
       fill_in 'Zip', with: '12345'
 
-      click_on 'Submit Changes'
+      click_on 'Update Shelter'
 
       expect(current_path).to eq("/shelters/#{shelter1.id}")
       expect(page).to have_content('New Pet Shop Name')

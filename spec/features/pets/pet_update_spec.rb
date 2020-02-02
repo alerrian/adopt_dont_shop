@@ -39,7 +39,7 @@ RSpec.describe 'editing a pet', type: :feature do
 
       expect(current_path).to eq("/pets/#{@pet1.id}")
       expect(page).to have_content('Oscar')
-      expect(page).to have_content('female')
+      expect(page).to have_content('F')
     end
   end
 end

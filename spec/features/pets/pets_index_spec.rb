@@ -48,8 +48,8 @@ RSpec.describe 'shelters index page', type: :feature do
       expect(page).to have_content(@pet2.name)
       expect(page).to have_content(@pet1.age)
       expect(page).to have_content(@pet2.age)
-      expect(page).to have_content(@pet1.sex)
-      expect(page).to have_content(@pet2.sex)
+      expect(page).to have_content('F')
+      expect(page).to have_content('M')
       expect(page).to have_content(@shelter1.name)
       expect(page).to have_content(@shelter2.name)
     end
