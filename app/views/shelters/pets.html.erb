@@ -2,7 +2,7 @@
   <p><%= image_tag pet.image %></p>
   <p>Name: <%= pet.name %></p>
   <p>Age: <%= pet.age %></p>
-  <p>Sex: <%= pet.sex %></p>
+  <p>Sex: <%= pet.sex.first.upcase %></p>
 <% end %>
 
 <%= button_to  'Create Pet', "pets/new", method: :get %>

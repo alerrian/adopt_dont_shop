@@ -3,8 +3,8 @@
 <% @pets.each do |pet| %>
   <p><%= image_tag pet.image %></p>
   <p>Name: <%= link_to pet.name, "/pets/#{pet.id}" %></p>
-  <p>Pet age: <%= pet.age %></p>
-  <p>Pet sex: <%= pet.sex %></p>
+  <p>Age: <%= pet.age %></p>
+  <p>Sex: <%= pet.sex.first.upcase %></p>
   <p>Shelter name: <%= link_to pet.shelter.name, "/shelters/#{pet.shelter.id}" %></p>
   <p><%= button_to  "Update Pet", "/pets/#{pet.id}/edit", method: :get %></p>
   <p><%= button_to  "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %></p>

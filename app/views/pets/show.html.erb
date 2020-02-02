@@ -3,7 +3,7 @@
 <p>Name: <%= @pet.name %></p>
 <p>Description: <%= @pet.description %>
 <p>Age: <%= @pet.age %></p>
-<p>Pet sex: <%= @pet.sex.first.upcase %></p>
+<p>Sex: <%= @pet.sex.first.upcase %></p>
 <p>Adoption Status: <%= @pet.status %></p>
 
 <%= button_to 'Update Pet', "/pets/#{@pet.id}/edit", method: :get %>
