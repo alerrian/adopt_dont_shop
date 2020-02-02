@@ -9,8 +9,15 @@
   </head>
 
   <body>
-    <%= button_to 'All Shelters', '/shelters', method: :get %>
-    <%= button_to 'All Pets', '/pets', method: :get %>
+    <header id="global_header">
+      <ul>
+        <li><h1 id="header_text">Adopt Don't Shop</h1></li>
+        <li style="float: right;"><a href='/shelters'>All Shelters</a></li>
+        <li style="float: right;"><a href='/pets'>All Pets</a></li>
+      </ul>
+    </header>
+
     <%= yield %>
+
   </body>
 </html>
