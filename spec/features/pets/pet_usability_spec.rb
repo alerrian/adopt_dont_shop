@@ -39,6 +39,6 @@ RSpec.describe 'as a visitor', type: :feature do
     click_button "Delete #{@pet1.name}"
 
     expect(current_path).to eq('/pets')
-    expect(page).to have_no_content(@pet1.name) 
+    expect(page).to have_no_content(@pet1.name)
   end
 end
