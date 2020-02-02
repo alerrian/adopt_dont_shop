@@ -21,7 +21,7 @@ RSpec.describe 'editing a shelter' do
       fill_in 'Address', with: '1234 Address Road'
       fill_in 'City', with: 'Denver'
       fill_in 'State', with: 'CO'
-      fill_in 'Zip', with: 12345
+      fill_in 'Zip', with: '12345'
 
       click_on 'Submit Changes'
 
