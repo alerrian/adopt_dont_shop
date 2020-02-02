@@ -14,7 +14,7 @@ meg = Shelter.create(name: "Meg's Shelter",
                      zip: '17033')
 
 # Mike's Shelter has one pet, Athena, 1 year old, female, description: butthead
-Pet.create(image: 'https://www.talenthounds.ca/wp-content/uploads/2014/02/1010297_10151682411488254_1369748570_n.jpg',
+Pet.create(image: 'https://qph.fs.quoracdn.net/main-qimg-93bfd510cdebb550b6d46a2455d3c39a',
            name: 'Athena',
            description: 'butthead',
            age: '1',

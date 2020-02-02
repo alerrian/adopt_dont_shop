@@ -3,8 +3,8 @@
 <% @shelters.each do |shelter| %>
   <p><%= link_to shelter.name, "/shelters/#{shelter.id}", style: "float: left;" %></p>
   <p>
-    <%= button_to  "Update #{shelter.name}", "/shelters/#{shelter.id}/edit", method: :get, style: "float: left;" %>
-    <%= button_to  "Delete #{shelter.name}", "/shelters/#{shelter.id}", method: :delete, style: "color: red" %>
+    <%= button_to  "Update #{shelter.name}", "/shelters/#{shelter.id}/edit", method: :get, id: "update_button" %>
+    <%= button_to  "Delete #{shelter.name}", "/shelters/#{shelter.id}", method: :delete, id: "delete_button" %>
   </p>
 <% end %>
 
