@@ -6,6 +6,8 @@
 <%= @shelter.zip %>
 </p>
 
+<%= link_to "See our pets!", "/shelters/#{@shelter.id}/pets" %>
+
 <%= button_to 'Edit', "/shelters/#{@shelter.id}/edit", method: :get %>
 <%= button_to 'Delete Shelter', "/shelters/#{@shelter.id}", method: :delete %>
 <%= button_to 'Back to Shelter List', '/shelters', method: :get %>
