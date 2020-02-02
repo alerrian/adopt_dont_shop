@@ -23,7 +23,9 @@ RSpec.describe 'editing a pet', type: :feature do
     end
 
     it 'can edit parameters of a pet' do
-      click_button 'Updte Pet Information'
+      visit "/pets/#{@pet1.id}"
+
+      click_on 'Update Pet'
 
       expect(current_path).to eq("/pets/#{@pet1.id}/edit")
 
@@ -33,9 +35,9 @@ RSpec.describe 'editing a pet', type: :feature do
       fill_in 'age', with: '1'
       fill_in 'sex', with: 'female'
 
-      click_button 'Update'
+      click_on 'Update'
 
-      expect(current_path).to eq("/pets/#{pet1.id}")
+      expect(current_path).to eq("/pets/#{@pet1.id}")
       expect(page).to have_content('Oscar')
       expect(page).to have_content('female')
     end
