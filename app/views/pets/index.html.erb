@@ -2,10 +2,10 @@
 
 <% @pets.each do |pet| %>
   <p><%= image_tag pet.image %></p>
-  <p>Pet name: <%= pet.name %></p>
+  <p>Pet name: <%= link_to pet.name, "/pets/#{pet.id}" %></p>
   <p>Pet age: <%= pet.age %></p>
   <p>Pet sex: <%= pet.sex %></p>
-  <p>Shelter name: <%= pet.shelter.name %></p>
+  <p>Shelter name: <%= link_to pet.shelter.name, "/shelters/#{pet.shelter.id}" %></p>
   <p><%= button_to  "Update #{pet.name}", "/pets/#{pet.id}/edit", method: :get %></p>
   <p><%= button_to  "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %></p>
 <% end %>
