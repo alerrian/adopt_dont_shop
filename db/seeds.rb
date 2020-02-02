@@ -19,7 +19,7 @@ Pet.create(image: 'https://qph.fs.quoracdn.net/main-qimg-93bfd510cdebb550b6d46a2
            description: 'butthead',
            age: '1',
            sex: 'female',
-           status: 'false',
+           status: 'Adoptable',
            shelter_id: mike.id)
 
 Pet.create(image: 'https://qph.fs.quoracdn.net/main-qimg-93bfd510cdebb550b6d46a2455d3c39a',
@@ -27,5 +27,5 @@ Pet.create(image: 'https://qph.fs.quoracdn.net/main-qimg-93bfd510cdebb550b6d46a2
            description: 'good dog',
            age: '4',
            sex: 'male',
-           status: 'false',
+           status: 'Adoptable',
            shelter_id: meg.id)
