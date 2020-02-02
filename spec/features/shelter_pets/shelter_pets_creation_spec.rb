@@ -14,7 +14,7 @@ RSpec.describe 'as a visitor', type: :feature do
   it 'can create a pet for a shelter' do
     visit "/shelters/#{@shelter1.id}/pets"
 
-    click_button 'Add new pet'
+    click_button 'Create Pet'
 
     expect(current_path).to eq("/shelters/#{@shelter1.id}/pets/new")
 

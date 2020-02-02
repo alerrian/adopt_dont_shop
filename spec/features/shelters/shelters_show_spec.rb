@@ -45,7 +45,7 @@ RSpec.describe 'shelter show page links' do
 
       visit "/shelters/#{shelter1.id}"
 
-      click_button 'Edit'
+      click_button 'Update Shelter'
 
       expect(current_path).to eq("/shelters/#{shelter1.id}/edit")
     end

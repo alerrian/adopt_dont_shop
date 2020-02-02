@@ -1,8 +1,8 @@
 <% @shelter_pets.pets.each do |pet| %>
-  <p id="pet_pic"><%= image_tag pet.image %></p>
-  <p id="pet_info">Name: <%= pet.name %></p>
+  <p><%= image_tag pet.image %></p>
+  <p>Name: <%= pet.name %></p>
   <p>Age: <%= pet.age %></p>
   <p>Sex: <%= pet.sex %></p>
 <% end %>
 
-<%= button_to  'Add new pet', "pets/new", method: :get %>
+<%= button_to  'Create Pet', "pets/new", method: :get %>

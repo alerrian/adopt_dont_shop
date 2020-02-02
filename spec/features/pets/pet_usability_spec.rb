@@ -24,9 +24,9 @@ RSpec.describe 'as a visitor', type: :feature do
   it 'can update a pet from index' do
     visit '/pets'
 
-    expect(page).to have_button("Update #{@pet1.name}")
+    expect(page).to have_button("Update Pet")
 
-    click_button "Update #{@pet1.name}"
+    click_button "Update Pet"
 
     expect(current_path).to eq("/pets/#{@pet1.id}/edit")
   end
