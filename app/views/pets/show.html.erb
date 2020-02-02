@@ -1,9 +1,9 @@
 <p><%= image_tag @pet.image %></p>
 <h1><%= @pet.name %></h1>
-<p>Pet name: <%= @pet.name %></p>
+<p>Name: <%= @pet.name %></p>
 <p>Description: <%= @pet.description %>
-<p>Pet age: <%= @pet.age %></p>
-<p>Pet sex: <%= @pet.sex %></p>
+<p>Age: <%= @pet.age %></p>
+<p>Pet sex: <%= @pet.sex.first.upcase %></p>
 <p>Adoption Status: <%= @pet.status %></p>
 
 <%= button_to 'Update Pet', "/pets/#{@pet.id}/edit", method: :get %>
