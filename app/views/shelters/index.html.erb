@@ -1,9 +1,11 @@
 <h1>Shelter List</h1>
 
 <% @shelters.each do |shelter| %>
-  <p><%= link_to "#{shelter.name}", "/shelters/#{shelter.id}" %></p>
-  <%= button_to  "Update #{shelter.name}", "/shelters/#{shelter.id}/edit", method: :get %>
-  <%= button_to  "Delete #{shelter.name}", "/shelters/#{shelter.id}", method: :delete %>
+  <p><%= link_to "#{shelter.name}", "/shelters/#{shelter.id}", style: "float: left;" %></p>
+  <p>
+    <%= button_to  "Update #{shelter.name}", "/shelters/#{shelter.id}/edit", method: :get, style: "float: left;" %>
+    <%= button_to  "Delete #{shelter.name}", "/shelters/#{shelter.id}", method: :delete, style: "color: red" %>
+  </p>
 <% end %>
 
 <%= button_to 'Create a new Shelter', "/shelters/new", method: :get %>
