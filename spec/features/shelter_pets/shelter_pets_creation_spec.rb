@@ -9,7 +9,6 @@ RSpec.describe 'as a visitor', type: :feature do
       state: 'CO',
       zip: '80202'
     )
-
   end
 
   it 'can create a pet for a shelter' do
