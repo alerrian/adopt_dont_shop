@@ -14,7 +14,7 @@
   <%= text_field_tag :state %></p>
 
   <p><%= label_tag :zip %>
-  <%= text_field_tag :zip %></p>
+  <%= text_field_tag :zip, nil, maxlength: 5 %></p>
   
   <%= submit_tag 'Update Shelter' %>
 <% end %>
