@@ -16,5 +16,8 @@
   <%= label_tag :sex %>
   <%= text_field_tag :sex %>
 
+  <%= text_field_tag :status, 'Adoptable', :hidden => true %>
+  <%= text_field_tag :shelter_id, @shelter_id, :hidden => true %>
+
   <%= submit_tag "Update Pet", method: :patch %>
 <% end %>
