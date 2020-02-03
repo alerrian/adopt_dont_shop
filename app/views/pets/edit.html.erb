@@ -1,23 +1,23 @@
 <p>Edit Pet Information</p>
 
-<%= form_tag "/pets/#{@pet_id}", method: :patch do %>
+<%= form_tag "/pets/#{@pet_id.id}/edit", method: :patch do %>
   <%= label_tag :image %>
-  <%= text_field_tag :image %>
+  <%= text_field_tag :image, @pet_id.image %>
 
   <%= label_tag :name %>
-  <%= text_field_tag :name %>
+  <%= text_field_tag :name, @pet_id.name %>
 
   <%= label_tag :description %>
-  <%= text_field_tag :description %>
+  <%= text_field_tag :description, @pet_id.description %>
 
   <%= label_tag :age %>
-  <%= text_field_tag :age %>
+  <%= text_field_tag :age, @pet_id.age %>
 
   <%= label_tag :sex %>
-  <%= text_field_tag :sex %>
+  <%= text_field_tag :sex, @pet_id.sex %>
 
   <%= text_field_tag :status, 'Adoptable', :hidden => true %>
-  <%= text_field_tag :shelter_id, @shelter_id, :hidden => true %>
+  <%= text_field_tag :shelter_id, @pet_id.shelter.id, :hidden => true %>
 
   <%= submit_tag "Update Pet" %>
 <% end %>
