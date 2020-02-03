@@ -10,7 +10,7 @@ class SheltersController < ApplicationController
   end
 
   def pets
-    @shelter_pets = Shelter.find(params[:shelter_id])
+    @shelter_pets = Shelter.find(params[:id])
   end
 
   def create
@@ -19,7 +19,7 @@ class SheltersController < ApplicationController
   end
 
   def edit
-    @shelter_id = Shelter.find(params[:id])
+    @shelter_id = params[:id]
   end
 
   def update
