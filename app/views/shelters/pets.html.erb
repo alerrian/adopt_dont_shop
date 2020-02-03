@@ -3,6 +3,7 @@
   <p>Name: <%= link_to pet.name, "pets/#{pet.id}" %></p>
   <p>Age: <%= pet.age %></p>
   <p>Sex: <%= pet.sex.first.upcase %></p>
+  <p><%= button_to  "Update Pet", "/pets/#{pet.id}/edit", method: :get %></p>
 <% end %>
 
 <%= button_to  "Create Pet", "pets/new", method: :get %>
